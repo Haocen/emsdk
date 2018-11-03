@@ -14,3 +14,7 @@ RUN cd /root/ \
  && echo "int main() {}" > hello_world.cpp \
  && emcc hello_world.cpp
 
+RUN echo "source /root/emsdk/emsdk_env.sh --build=Release" >> /root/.bashrc
+
+CMD ["/bin/bash", "-c"]
+
